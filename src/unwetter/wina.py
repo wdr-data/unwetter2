@@ -27,13 +27,7 @@ def from_id(id):
     text = generate.description(event)
     keywords = generate.keywords(event)
 
-    breaking = False
-    if not db.breaking_memo():
-        breaking = True
-    elif event["severity"] == "Extreme":
-        breaking = True
-
-    return wina_xml(sent, title, text, keywords, breaking)
+    return wina_xml(sent, title, text, keywords)
 
 
 def wina_xml(sent, title, text, keywords="", breaking=False):

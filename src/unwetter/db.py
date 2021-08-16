@@ -32,16 +32,7 @@ collection_meta = mongo_db.events_meta
 
 @lru_cache(maxsize=32)
 def by_id(id):
-    event = collection.find_one({"id": id})
-
-    if event and "special_type" not in event:
-        from . import dwd
-
-        event["special_type"] = dwd.special_type(
-            event, by_ids(event.get("references", []))
-        )
-
-    return event
+    return collection.find_one({"id": id})
 
 
 def by_ids(ids):
@@ -70,19 +61,6 @@ def set_warn_events_memo(active):
         {"id": "warn_events_memo"},
         {"id": "warn_events_memo", "active": active},
         upsert=True,
-    )
-
-
-def breaking_memo():
-    try:
-        return collection_meta.find_one({"id": "breaking_memo"})["active"]
-    except TypeError:
-        return None
-
-
-def set_breaking_memo(active):
-    collection_meta.replace_one(
-        {"id": "breaking_memo"}, {"id": "breaking_memo", "active": active}, upsert=True
     )
 
 
