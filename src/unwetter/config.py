@@ -3,6 +3,17 @@
 import yaml
 
 
+COLORS = {
+    "SEVERITIES": {
+        "Minor": "#ffcc00a0",
+        "Moderate": "#ff6600a0",
+        "Severe": "#ff0000a0",
+        "Extreme": "#b00087a3",
+        "Disabled": "#999999e0",
+    },
+}
+
+
 with open("config/config.yml", "r") as fp:
     CONFIG = yaml.safe_load(fp.read())
 
