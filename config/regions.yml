@@ -2,7 +2,7 @@
 Ruhrgebiet:
   grammar:
     gender: das
-    genitive: Ruhrgebiets
+    genitive: Ruhrgebiets (NRW)
   districts:
     - Kreis Mettmann
     - Stadt Mülheim an der Ruhr
@@ -17,7 +17,6 @@ Ruhrgebiet:
     - Stadt Hagen
     - Stadt Hamm
     - Ennepe-Ruhr-Kreis
-    - Stadt Wuppertal
     - Kreis Recklinghausen
     - Kreis Unna
     - Kreis Wesel
@@ -25,7 +24,7 @@ Ruhrgebiet:
 Westliches Ruhrgebiet:
   grammar:
     gender: das
-    genitive: westlichen Ruhrgebiets
+    genitive: westlichen Ruhrgebiets (NRW)
     definite_article: westliche Ruhrgebiet
   districts:
     - Kreis Wesel
@@ -40,8 +39,8 @@ Westliches Ruhrgebiet:
 Östliches Ruhrgebiet:
   grammar:
     gender: das
-    genitive: östlichen Ruhrgebiets
-    definite_article: östliche Ruhrgebiet
+    genitive: östlichen Ruhrgebiets (NRW)
+    definite_article: östliche Ruhrgebiet (NRW)
   districts:
     - Kreis Recklinghausen
     - Stadt Herne
@@ -55,7 +54,7 @@ Westliches Ruhrgebiet:
 Emscher-Lippe-Region:
   grammar:
     gender: die
-    genitive: Emscher-Lippe-Region
+    genitive: Emscher-Lippe-Region (NRW)
   districts:
     - Stadt Bottrop
     - Kreis Recklinghausen
@@ -64,7 +63,7 @@ Emscher-Lippe-Region:
 Köln-Bundesstadt Bonner Raum:
   grammar:
     gender: der
-    genitive: Köln-Bundesstadt Bonner Raums
+    genitive: Köln-Bundesstadt Bonner Raums (NRW)
   districts:
     - Stadt Köln
     - Rhein-Erft-Kreis
@@ -75,7 +74,7 @@ Köln-Bundesstadt Bonner Raum:
 Süden von NRW:
   grammar:
     gender: der
-    genitive: Südens von NRW
+    genitive: Südens von NRW (NRW)
   districts:
     - Stadt Köln
     - Rhein-Erft-Kreis
@@ -92,7 +91,7 @@ Süden von NRW:
 Niederrhein:
   grammar:
     gender: der
-    genitive: Niederrheins
+    genitive: Niederrheins (NRW)
   districts:
     - Kreis Kleve
     - Kreis Wesel
@@ -107,10 +106,10 @@ Niederrhein:
 Niederrheinisches Tiefland:
   grammar:
     gender: das
-    genitive: Niederrheinischen Tieflands
-    definite_article: Niederrheinische Tiefland
+    genitive: Niederrheinischen Tieflands (NRW)
+    definite_article: Niederrheinische Tiefland (NRW)
   districts:
-    - Kreis Heinsberg 
+    - Kreis Heinsberg
     - Kreis Viersen
     - Rhein-Kreis Neuss
     - Stadt Mönchengladbach
@@ -124,7 +123,7 @@ Niederrheinisches Tiefland:
 Münsterland:
   grammar:
     gender: das
-    genitive: Münsterlandes
+    genitive: Münsterlandes (NRW)
   districts:
     - Stadt Münster
     - Kreis Steinfurt
@@ -136,7 +135,7 @@ Münsterland:
 Nordosten von NRW:
   grammar:
     gender: der
-    genitive: Nordostens von NRW
+    genitive: Nordostens von NRW (NRW)
   districts:
     - Kreis Minden-Lübbecke
     - Kreis Herford
@@ -150,7 +149,7 @@ Nordosten von NRW:
 Sauerland:
   grammar:
     gender: das
-    genitive: Sauerlandes
+    genitive: Sauerlandes (NRW)
   districts:
     - Kreis Soest
     - Hochsauerlandkreis
@@ -160,14 +159,14 @@ Sauerland:
 Siegerland:
   grammar:
     gender: das
-    genitive: Siegerlandes
+    genitive: Siegerlandes (NRW)
   districts:
     - Kreis Siegen-Wittgenstein
 
 Südwestfalen:
   grammar:
     gender: False
-    genitive: Südwestfalens
+    genitive: Südwestfalens (NRW)
   districts:
     - Hochsauerlandkreis
     - Märkischer Kreis
@@ -178,7 +177,7 @@ Südwestfalen:
 Westfalen:
   grammar:
     gender: False
-    genitive: Westfalens
+    genitive: Westfalens (NRW)
   districts:
     - Ennepe-Ruhr-Kreis
     - Hochsauerlandkreis
@@ -211,7 +210,7 @@ Westfalen:
 Rheinland:
   grammar:
     gender: das
-    genitive: Rheinlandes
+    genitive: Rheinlandes (NRW)
   districts:
     - StädteRegion Aachen
     - Bundesstadt Bonn
@@ -243,7 +242,7 @@ Rheinland:
 Ostwestfalen-Lippe:
   grammar:
     gender: False
-    genitive: von Ostwestfalen-Lippe
+    genitive: von Ostwestfalen-Lippe (NRW)
   districts:
     - Kreis Minden-Lübbecke
     - Kreis Herford
@@ -256,8 +255,8 @@ Ostwestfalen-Lippe:
 Bergisches Land:
   grammar:
     gender: das
-    genitive: Bergischen Landes
-    definite_article: Bergische Land
+    genitive: Bergischen Landes (NRW)
+    definite_article: Bergische Land (NRW)
   districts:
     - Stadt Wuppertal
     - Stadt Remscheid
@@ -268,18 +267,684 @@ Bergisches Land:
     - Rheinisch-Bergischer Kreis
     - Rhein-Sieg-Kreis
 
-Oberbergisches Land:
+Mecklenburg (Mecklenburg-Vorpommern):
   grammar:
-    gender: das
-    genitive: Oberbergischen Landes
-    definite_article: Oberbergische Land
-  districts: 
-    - Rheinisch-Bergischer Kreis
-    - Oberbergischer Kreis
-    - Rhein-Sieg-Kreis
-    - Stadt Leverkusen
+    gender: False
+    genitive: von Mecklenburg (Mecklenburg-Vorpommern)
+  districts:
+    - Hansestadt Rostock
+    - Stadt Schwerin
+    - Kreis Mecklenburgische Seenplatte
+    - Kreis Rostock
+    - Kreis Nordwestmecklenburg
+    - Kreis Ludwigslust-Parchim
 
-Eifel:
+Vorpommern (Mecklenburg-Vorpommern):
+  grammar:
+    gender: False
+    genitive: von Vorpommern (Mecklenburg-Vorpommern)
+  districts:
+    - Vorpommern-Rügen
+    - Vorpommern-Greifswald
+
+Region Havelland-Fläming (Brandenburg):
   grammar:
     gender: die
-    genitive: Eifel
+    genitive: Region Havelland-Fä�ming (Brandenburg)
+  districts:
+    - Stadt Brandenburg
+    - Stadt Potsdam
+    - Kreis Havelland
+    - Kreis Potsdam-Mittelmark
+    - Kreis Teltow-Fläming
+
+Region Lausitz-Spreewald (Brandenburg):
+  grammar:
+    gender: die
+    genitive: Region Lausitz-Spreewald (Brandenburg)
+  districts:
+    - Stadt Cottbus
+    - Kreis Dahme-Spreewald
+    - Kreis Elbe-Elster
+    - Kreis Oberspreewald-Lausitz
+    - Kreis Spree-Neiße
+
+Region Oderland-Spree (Brandenburg):
+  grammar:
+    gender: die
+    genitive: Region Oderland-Spree (Brandenburg)
+  districts:
+    - Stadt Frankfurt (Oder)
+    - Kreis Märkisch-Oderland
+    - Kreis Oder-Spree
+
+Region Prignitz-Oberhavel (Brandenburg):
+  grammar:
+    gender: die
+    genitive: Region Prignitz-Oberhavel (Brandenburg)
+  districts:
+    - Kreis Oberhavel
+    - Kreis Ostprignitz-Ruppin
+    - Kreis Prignitz
+
+Region Uckermark-Barnim (Brandenburg):
+  grammar:
+    gender: die
+    genitive: Region Uckermark-Barnim (Brandenburg)
+  districts:
+    - Kreis Barnim
+    - Kreis Uckermark
+
+Land Bremen:
+  grammar:
+    gender: das
+    genitive: Landes Bremen
+  districts:
+    - Hansestadt Bremen
+    - Stadt Bremerhaven
+
+Mittelhessen (Hessen):
+  grammar:
+    gender: False
+    genitive: von Mittelhessen (Hessen)
+  districts:
+    - Wetteraukreis
+    - Kreis Gießen
+    - Lahn-Dill-Kreis
+    - Kreis Limburg-Weilburg
+    - Kreis Marburg-Biedenkopf
+    - Vogelsbergkreis
+    - Kreis Fulda
+
+Nordhessen (Hessen):
+  grammar:
+    gender: False
+    genitive: von Nordhessen (Hessen)
+  districts:
+    - Kreis und Stadt Kassel
+    - Kreis Hersfeld-Rotenburg
+    - Schwalm-Eder-Kreis
+    - Kreis Waldeck-Frankenberg
+    - Werra-Meißner-Kreis
+
+Rhein-Main-Gebiet (Hessen):
+  grammar:
+    gender: das
+    genitive: Rhein-Main-Gebietes (Hessen)
+  districts:
+    - Stadt Frankfurt am Main
+    - Kreis und Stadt Offenbach
+    - Stadt Wiesbaden
+    - Kreis Groß-Gerau
+    - Hochtaunuskreis
+    - Main-Kinzig-Kreis
+    - Main-Taunus-Kreis
+    - Rheingau-Taunus-Kreis
+
+Südhessen (Hessen):
+  grammar:
+    gender: False
+    genitive: von Südhessen (Hessen)
+  districts:
+    - Kreis Bergstraße
+    - Kreis Darmstadt-Dieburg und Stadt Darmstadt
+    - Odenwaldkreis
+
+Eifel (Rheinland-Pfalz):
+  grammar:
+    gender: die
+    genitive: Eifel (Rheinland-Pfalz)
+  districts:
+    - Kreis Ahrweiler
+    - Eifelkreis Bitburg-Prüm
+    - Kreis Vulkaneifel
+    - Kreis Mayen-Koblenz
+    - Kreis Cochem-Zell
+
+Hunsrück (Rheinland-Pfalz):
+  grammar:
+    gender: der
+    genitive: Hunsrücks (Rheinland-Pfalz)
+  districts:
+    - Kreis Cochem-Zell
+    - Kreis Birkenfeld
+    - Rhein-Hunsrück-Kreis
+    - Kreis Bad Kreuznach
+
+Mittelrhein (Rheinland-Pfalz):
+  grammar:
+    gender: der
+    genitive: Mittelrheins (Rheinland-Pfalz)
+  districts:
+    - Stadt Koblenz
+    - Neuwied
+    - Rhein-Lahn-Kreis
+
+Region Mosel-Saar (Rheinland-Pfalz):
+  grammar:
+    gender: die
+    genitive: Region Mosel-Saar (Rheinland-Pfalz)
+  districts:
+    - Kreis Bernkastel-Wittlich
+    - Kreis Trier-Saarburg und Stadt Trier
+
+Pfalz (Rheinland-Pfalz):
+  grammar:
+    gender: die
+    genitive: Pfalz (Rheinland-Pfalz)
+  districts:
+    - Stadt Frankenthal
+    - Kreis und Stadt Kaiserslautern
+    - Stadt Landau in der Pfalz
+    - Stadt Neustadt an der Weinstraße
+    - Stadt Speyer
+    - Stadt Zweibrücken
+    - Kreis Bad Dürkheim
+    - Donnersbergkreis
+    - Kreis Germersheim
+    - Kreis Kusel
+    - Kreis Südliche Weinstraße
+    - Rhein-Pfalz-Kreis und Stadt Ludwigshafen
+    - Kreis Südwestpfalz und Stadt Pirmasens
+
+Rheinhessen (Rheinland-Pfalz):
+  grammar:
+    gender: False
+    genitive: von Rheinhessen (Rheinland-Pfalz)
+  districts:
+    - Stadt Worms
+    - Kreis Alzey-Worms
+    - Kreis Mainz-Bingen und Stadt Mainz
+
+Westerwald (Rheinland-Pfalz):
+  grammar:
+    gender: der
+    genitive: Westerwalds (Rheinland-Pfalz)
+  districts:
+    - Kreis Altenkirchen
+    - Westerwaldkreis
+
+Region Stuttgart (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Stuttgart (Baden-Württemberg)
+  districts:
+    - Stadt Stuttgart
+    - Kreis Böblingen
+    - Kreis Esslingen
+    - Kreis Göppingen
+    - Kreis Ludwigsburg
+    - Rems-Murr-Kreis
+
+Region Heilbronn-Franken (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Heilbronn-Franken (Baden-Württemberg)
+  districts:
+    - Kreis und Stadt Heilbronn
+    - Hohenlohekreis
+    - Kreis Schwäbisch Hall
+    - Main-Tauber-Kreis
+
+Region Ostwürttemberg (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Ostwürttemberg (Baden-Württemberg)
+  districts:
+    - Kreis Heidenheim
+    - Ostalbkreis
+
+Region Mittlerer Oberrhein (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Mittlerer Oberrhein (Baden-Württemberg)
+  districts:
+    - Stadt Baden-Baden
+    - Kreis und Stadt Karlsruhe
+    - Kreis Rastatt
+
+Region Rhein-Neckar-Odenwald (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Rhein-Neckar-Odenwald (Baden-Württemberg)
+  districts:
+    - Stadt Mannheim
+    - Neckar-Odenwald-Kreis
+    - Rhein-Neckar-Kreis und Stadt Heidelberg
+
+Nordschwarzwald (Baden-Württemberg):
+  grammar:
+    gender: der
+    genitive: Nordschwarzwaldes (Baden-Württemberg)
+  districts:
+    - Kreis Calw
+    - Enzkreis und Stadt Pforzheim
+    - Kreis Freudenstadt
+
+Südlicher Oberrhein (Baden-Württemberg):
+  grammar:
+    gender: der
+    genitive: südlichen Oberrheins (Baden-Württemberg)
+  districts:
+    - Kreis Breisgau-Hochschwarzwald und Stadt Freiburg
+    - Kreis Emmendingen
+    - Ortenaukreis
+
+Region Schwarzwald-Baar-Heuberg (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Schwarzwald-Baar-Heuberg (Baden-Württemberg)
+  districts:
+    - Kreis Rottweil
+    - Schwarzwald-Baar-Kreis
+    - Kreis Tuttlingen
+
+Region Hochrhein-Bodensee (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Hochrhein-Bodensee (Baden-Württemberg)
+  districts:
+    - Kreis Konstanz
+    - Kreis Lörrach
+    - Kreis Waldshut
+
+Region Neckar-Alb (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Neckar-Alb (Baden-Württemberg)
+  districts:
+    - Kreis Reutlingen
+    - Kreis Tübingen
+    - Zollernalbkreis
+
+Region Donau-Iller (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Donau-Iller (Baden-Württemberg)
+  districts:
+    - Alb-Donau-Kreis und Stadt Ulm
+    - Kreis Biberach
+
+Region Bodensee-Oberschwaben (Baden-Württemberg):
+  grammar:
+    gender: die
+    genitive: Region Bodensee-Oberschwaben (Baden-Württemberg)
+  districts:
+    - Bodenseekreis
+    - Kreis Ravensburg
+    - Kreis Sigmaringen
+
+Regierungsbezirk Tübingen (Baden-Württemberg):
+  grammar:
+    gender: der
+    genitive: Regierungsbezirks Tübingen (Baden-Württemberg)
+  districts:
+    - Kreis Reutlingen
+    - Kreis Tübingen
+    - Zollernalbkreis
+    - Alb-Donau-Kreis und Stadt Ulm
+    - Kreis Biberach
+    - Bodenseekreis
+    - Kreis Ravensburg
+    - Kreis Sigmaringen
+
+Regierungsbezirk Stuttgart (Baden-Württemberg):
+  grammar:
+    gender: der
+    genitive: Regierungsbezirks Stuttgart (Baden-Württemberg)
+  districts:
+    - Stadt Stuttgart
+    - Kreis Böblingen
+    - Kreis Esslingen
+    - Kreis Göppingen
+    - Kreis Ludwigsburg
+    - Rems-Murr-Kreis
+    - Kreis und Stadt Heilbronn
+    - Hohenlohekreis
+    - Kreis Schwäbisch Hall
+    - Main-Tauber-Kreis
+    - Kreis Heidenheim
+    - Ostalbkreis
+
+Regierungsbezirk Karlsruhe (Baden-Württemberg):
+  grammar:
+    gender: der
+    genitive: Regierungsbezirks Karlsruhe (Baden-Württemberg)
+  districts:
+    - Stadt Baden-Baden
+    - Kreis und Stadt Karlsruhe
+    - Kreis Rastatt
+    - Stadt Mannheim
+    - Neckar-Odenwald-Kreis
+    - Rhein-Neckar-Kreis und Stadt Heidelberg
+    - Kreis Calw
+    - Enzkreis und Stadt Pforzheim
+    - Kreis Freudenstadt
+
+Regierungsbezirk Freiburg (Baden-Württemberg):
+  grammar:
+    gender: der
+    genitive: Regierungsbezirks Freiburg (Baden-Württemberg)
+  districts:
+    - Kreis Breisgau-Hochschwarzwald und Stadt Freiburg
+    - Kreis Emmendingen
+    - Ortenaukreis
+    - Kreis Rottweil
+    - Schwarzwald-Baar-Kreis
+    - Kreis Tuttlingen
+    - Kreis Konstanz
+    - Kreis Lörrach
+    - Kreis Waldshut
+
+Mittelfranken (Bayern):
+  grammar:
+    gender: False
+    genitive: von Mittelfranken (Bayern)
+  districts:
+    - Kreis und Stadt Ansbach
+    - Stadt Erlangen
+    - Kreis und Stadt Fürth
+    - Stadt Nürnberg
+    - Stadt Schwabach
+    - Kreis Erlangen-Höchstadt
+    - Kreis Nürnberger Land
+    - Kreis Neustadt a.d.Aisch - Bad Windsheim
+    - Kreis Roth
+    - Kreis Weißenburg-Gunzenhausen
+
+Oberbayern (Bayern):
+  grammar:
+    gender: False
+    genitive: Oberbayern (Bayern)
+  districts:
+    - Kreis und Stadt München
+    - Stadt Ingolstadt
+    - Kreis und Stadt Rosenheim
+    - Kreis Altötting
+    - Kreis Berchtesgadener Land
+    - Kreis Bad Tölz-Wolfratshausen
+    - Kreis Dachau
+    - Kreis Ebersberg
+    - Kreis Eichstätt
+    - Kreis Erding
+    - Kreis Freising
+    - Kreis Fürstenfeldbruck
+    - Kreis Garmisch-Partenkirchen
+    - Kreis Landsberg am Lech
+    - Kreis Miesbach
+    - Kreis Mühldorf a.Inn
+    - Kreis Neuburg-Schrobenhausen
+    - Kreis Pfaffenhofen a.d. Ilm
+    - Kreis Starnberg
+    - Kreis Traunstein
+    - Kreis Weilheim-Schongau
+
+Niederbayern (Bayern):
+  grammar:
+    gender: False
+    genitive: Niederbayern (Bayern)
+  districts:
+    - Kreis und Stadt Landshut
+    - Kreis und Stadt Passau
+    - Kreis Deggendorf
+    - Kreis Freyung-Grafenau
+    - Kreis Kelheim
+    - Kreis Regen
+    - Kreis Rottal-Inn
+    - Kreis Straubing-Bogen und Stadt Straubing
+    - Kreis Dingolfing-Landau
+
+Oberfranken (Bayern):
+  grammar:
+    gender: False
+    genitive: Oberfranken (Bayern)
+  districts:
+    - Kreis und Stadt Bamberg
+    - Kreis und Stadt Bayreuth
+    - Kreis und Stadt Coburg
+    - Kreis und Stadt Hof
+    - Kreis Forchheim
+    - Kreis Kronach
+    - Kreis Kulmbach
+    - Kreis Lichtenfels
+    - Kreis Wunsiedel
+
+Oberpfalz (Bayern):
+  grammar:
+    gender: False
+    genitive: Oberpfalz (Bayern)
+  districts:
+    - Stadt Amberg
+    - Kreis und Stadt Regensburg
+    - Stadt Weiden in der Oberpfalz
+    - Kreis Amberg-Sulzbach
+    - Kreis Cham
+    - Kreis Neumarkt i.d. OPf.
+    - Kreis Neustadt a.d. Waldnaab
+    - Kreis Schwandorf
+    - Kreis Tirschenreuth
+
+Schwaben (Bayern):
+  grammar:
+    gender: False
+    genitive: Schwaben (Bayern)
+  districts:
+    - Kreis und Stadt Augsburg
+    - Stadt Kaufbeuren
+    - Stadt Kempten (Allgäu)
+    - Stadt Memmingen
+    - Kreis Aichach-Friedberg
+    - Kreis Dillingen a.d. Donau
+    - Kreis Günzburg
+    - Kreis Neu-Ulm
+    - Kreis Lindau
+    - Kreis Ostallgäu
+    - Kreis Unterallgäu
+    - Kreis Donau-Ries
+    - Kreis Oberallgäu
+
+Unterfranken (Bayern):
+  grammar:
+    gender: False
+    genitive: Unterfranken (Bayern)
+  districts:
+    - Kreis und Stadt Aschaffenburg
+    - Kreis und Stadt Schweinfurt
+    - Kreis und Stadt Würzburg
+    - Kreis Bad Kissingen
+    - Kreis Rhön-Grabfeld
+    - Kreis Haßberge
+    - Kreis Kitzingen
+    - Kreis Miltenberg
+    - Kreis Main-Spessart
+
+Saarland:
+  grammar:
+    gender: das
+    genitive: Saarlandes
+  districts:
+    - Regionalverband Saarbrücken
+    - Kreis Merzig-Wadern
+    - Kreis Neunkirchen
+    - Kreis Saarlouis
+    - Saarpfalz-Kreis
+    - Kreis St. Wendel
+
+Berlin:
+  grammar:
+    gender: False
+    genitive: von Berlin
+  districts:
+    - Berlin
+
+Schleswig-Holstein:
+  grammar:
+    gender: False
+    genitive: von Schleswig-Holstein
+  districts:
+    - Stadt Flensburg
+    - Stadt Kiel
+    - Hansestadt Lübeck
+    - Stadt Neumünster
+    - Kreis Dithmarschen
+    - Kreis Herzogtum Lauenburg
+    - Kreis Nordfriesland
+    - Kreis Ostholstein
+    - Kreis Pinneberg
+    - Kreis Plön
+    - Kreis Rendsburg-Eckernförde
+    - Kreis Schleswig-Flensburg
+    - Kreis Segeberg
+    - Kreis Steinburg
+    - Kreis Stormarn
+
+Hamburg:
+  grammar:
+    gender: False
+    genitive: von Hamburg
+  districts:
+    - Hansestadt Hamburg
+
+Region Braunschweig (Niedersachsen):
+  grammar:
+    gender: die
+    genitive: Region Braunschweig (Niedersachsen)
+  districts:
+    - Stadt Braunschweig
+    - Stadt Salzgitter
+    - Stadt Wolfsburg
+    - Kreis Gifhorn
+    - Kreis Goslar
+    - Kreis Helmstedt
+    - Kreis Northeim
+    - Kreis Peine
+    - Kreis Wolfenbüttel
+    - Kreis Göttingen
+
+Region Hannover (Niedersachsen):
+  grammar:
+    gender: die
+    genitive: Region Hannover (Niedersachsen)
+  districts:
+    - Region Hannover
+    - Kreis Diepholz
+    - Kreis Hameln-Pyrmont
+    - Kreis Hildesheim
+    - Kreis Holzminden
+    - Kreis Nienburg
+    - Kreis Schaumburg
+
+Region Lüneburg (Niedersachsen):
+  grammar:
+    gender: die
+    genitive: Region Lüneburg (Niedersachsen)
+  districts:
+    - Kreis Celle
+    - Kreis Cuxhaven
+    - Kreis Harburg
+    - Kreis Lüchow-Dannenberg
+    - Kreis Lüneburg
+    - Kreis Osterholz
+    - Kreis Rotenburg (Wümme)
+    - Heidekreis
+    - Kreis Stade
+    - Kreis Uelzen
+    - Kreis Verden
+
+Weser-Ems-Region (Niedersachsen):
+  grammar:
+    gender: die
+    genitive: Weser-Ems-Region (Niedersachsen)
+  districts:
+    - Stadt Delmenhorst
+    - Stadt Emden
+    - Kreis und Stadt Oldenburg
+    - Kreis und Stadt Osnabrück
+    - Stadt Wilhelmshaven
+    - Kreis Ammerland
+    - Kreis Aurich
+    - Kreis Cloppenburg
+    - Kreis Emsland
+    - Kreis Friesland
+    - Kreis Grafschaft Bentheim
+    - Kreis Leer
+    - Kreis Vechta
+    - Kreis Wesermarsch
+    - Kreis Wittmund
+
+Sachsen-Anhalt:
+  grammar:
+    gender: False
+    genitive: von Sachsen-Anhalt
+  districts:
+    - Stadt Dessau-Roßlau
+    - Stadt Halle (Saale)
+    - Stadt Magdeburg
+    - Altmarkkreis Salzwedel
+    - Kreis Anhalt-Bitterfeld
+    - Kreis Börde
+    - Burgenlandkreis
+    - Kreis Harz - Tiefland
+    - Kreis Harz - Bergland
+    - Kreis Jerichower Land
+    - Kreis Mansfeld-Südharz
+    - Saalekreis
+    - Salzlandkreis
+    - Kreis Stendal
+    - Kreis Wittenberg
+
+Sachsen:
+  grammar:
+    gender: False
+    genitive: von Sachsen
+  districts:
+    - Stadt Chemnitz
+    - Erzgebirgskreis
+    - Kreis Mittelsachsen - Tiefland
+    - Kreis Mittelsachsen - Bergland
+    - Vogtlandkreis - Tiefland
+    - Vogtlandkreis - Bergland
+    - Kreis Zwickau - Tiefland
+    - Kreis Zwickau - Bergland
+    - Stadt Dresden
+    - Kreis Bautzen - Tiefland
+    - Kreis Bautzen - Bergland
+    - Kreis Görlitz - Tiefland
+    - Kreis Görlitz - Bergland
+    - Kreis Meißen
+    - Kreis Sächsische Schweiz-Osterzgebirge - Tiefland
+    - Kreis Sächsische Schweiz-Osterzgebirge - westelbisches Bergland
+    - Kreis Sächsische Schweiz-Osterzgebirge - ostelbisches Bergland
+    - Stadt Leipzig
+    - Kreis Leipzig
+    - Kreis Nordsachsen - Nord
+    - Kreis Nordsachsen - Süd
+
+Thüringen:
+  grammar:
+    gender: False
+    genitive: von Thüringen
+  districts:
+    - Stadt Erfurt
+    - Stadt Gera
+    - Stadt Jena
+    - Stadt Suhl
+    - Stadt Weimar
+    - Stadt Eisenach
+    - Kreis Eichsfeld
+    - Kreis Nordhausen
+    - Wartburgkreis
+    - Unstrut-Hainich-Kreis
+    - Kyffhäuserkreis
+    - Kreis Schmalkalden-Meiningen
+    - Kreis Gotha
+    - Kreis Sömmerda
+    - Kreis Hildburghausen
+    - Ilm-Kreis
+    - Kreis Weimarer Land
+    - Kreis Sonneberg
+    - Kreis Saalfeld-Rudolstadt
+    - Saale-Holzland-Kreis
+    - Saale-Orla-Kreis
+    - Kreis Greiz
+    - Kreis Altenburger Land
