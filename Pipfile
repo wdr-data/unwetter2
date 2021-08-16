@@ -15,14 +15,8 @@ apscheduler = "*"
 pyyaml = "*"
 pytz = "*"
 slack_sdk = "*"
-pyshp = "*"
-pillow = "*"
-pyproj = "*"
-shapely = "*"
 unwetter = {editable = true,path = "."}
 sentry-sdk = "*"
-colorutils = "*"
-blinker = "*"
 
 [dev-packages]
 pytest = "*"
