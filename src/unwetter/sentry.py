@@ -4,6 +4,9 @@ import sentry_sdk
 
 
 def init():
+    # TODO: Turn back on when we have a proper Sentry setup
+    return
+
     sentry_sdk.init(
         os.environ.get("SENTRY_DSN"),
         release=os.environ.get("HEROKU_SLUG_COMMIT"),

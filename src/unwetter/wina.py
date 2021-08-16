@@ -73,6 +73,10 @@ def upload(files):
     :return: Status code
     """
 
+    # TODO: Use a proper FTP server
+    print("Fake upload!")
+    return
+
     logins = [
         ("NVS_FTP_URL", "NVS_FTP_USER", "NVS_FTP_PASS"),
         ("NVS_FTP_URL_SECONDARY", "NVS_FTP_USER_SECONDARY", "NVS_FTP_PASS_SECONDARY"),
