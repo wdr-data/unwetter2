@@ -1,12 +1,11 @@
 #!/user/bin/env python3.6
 import os
 
-from slackclient import SlackClient
+from slack_sdk.web import WebClient
 
-from . import db, generate, config
-from .map import COLORS
+from . import db, generate
 from .generate import helpers, urls
-from .config import SEVERITY_FILTER, STATES_FILTER
+from .config import COLORS, SEVERITY_FILTER, STATES_FILTER
 
 
 # Set up Slack client
@@ -14,7 +13,7 @@ from .config import SEVERITY_FILTER, STATES_FILTER
 
 SLACK_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
 CHANNEL = os.environ.get("SLACK_CHANNEL")
-CLIENT = SlackClient(SLACK_TOKEN)
+CLIENT = WebClient(SLACK_TOKEN)
 
 
 def post_event(event):
@@ -108,7 +107,6 @@ def post_event(event):
                         "short": False,
                     },
                 ],
-                "image_url": generate.urls.map(event),
                 "callback_id": event["id"],
                 "footer": "Details zur Meldung im Thread",
                 "ts": int(event["sent"].timestamp()),
@@ -137,99 +135,6 @@ _Regionale Zuordnung_: {generate.region_list(event)}
         """.strip(),
         mrkdwn=True,
         thread_ts=thread_ts,
-        attachments=[
-            {
-                "fallback": "Textvorschläge",
-                "title": "Textvorschläge",
-                "text": "Von der UWA-Redaktion automatisch generierte Textvorschläge",
-                "callback_id": event["id"],
-                "color": "#000000",
-                "attachment_type": "default",
-                "actions": [
-                    {
-                        "name": "twitter",
-                        "text": ":bird: Twitter",
-                        "type": "button",
-                        "value": "twitter",
-                    },
-                    {
-                        "name": "crawl",
-                        "text": ":tv: TV-Crawl",
-                        "type": "button",
-                        "value": "crawl",
-                    },
-                    {
-                        "name": "radio",
-                        "text": ":radio: Radio",
-                        "type": "button",
-                        "value": "radio",
-                    },
-                    {
-                        "name": "info",
-                        "text": ":question: Infos zum Projekt",
-                        "type": "button",
-                        "value": "info",
-                    },
-                ],
-            },
-        ],
-    )
-
-
-def post_text(title, text):
-
-    post_message(
-        "",
-        attachments=[
-            {
-                "fallback": title,
-                "title": title,
-                "text": text,
-            }
-        ],
-    )
-
-
-def post_event_old(event):
-    post_message(
-        generate.description(event, short=True),
-        attachments=[
-            {
-                "fallback": "Textvorschläge generieren",
-                "title": "Textvorschläge generieren",
-                "text": "Textvorschläge für Twitter und den TV-Crawl werden im WDR automatisch "
-                "generiert.",
-                "callback_id": event["id"],
-                "color": "#3AA3E3",
-                "attachment_type": "default",
-                "actions": [
-                    {
-                        "name": "twitter",
-                        "text": ":bird: Twitter",
-                        "type": "button",
-                        "value": "twitter",
-                    },
-                    {
-                        "name": "crawl",
-                        "text": ":tv: TV-Crawl",
-                        "type": "button",
-                        "value": "crawl",
-                    },
-                    {
-                        "name": "dwd",
-                        "text": ":cloud: DWD Meldung",
-                        "type": "button",
-                        "value": "dwd",
-                    },
-                    {
-                        "name": "info",
-                        "text": ":question: Infos zum Projekt",
-                        "type": "button",
-                        "value": "info",
-                    },
-                ],
-            },
-        ],
     )
 
 
@@ -240,15 +145,13 @@ def post_message(message, *, private=False, channel=CHANNEL, **kwargs):
     the default channel.
     """
     if not private:
-        return CLIENT.api_call(
-            "chat.postMessage",
+        return CLIENT.chat_postMessage(
             channel=channel,
             text=message,
             **kwargs,
         )
     else:
-        return CLIENT.api_call(
-            "chat.postEphemeral",
+        return CLIENT.chat_postEphemeral(
             channel=channel,
             user=private,
             text=message,
