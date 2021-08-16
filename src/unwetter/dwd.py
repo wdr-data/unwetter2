@@ -158,10 +158,7 @@ def is_changed_minor(event, old_event):
     :param old_event:
     :return: bool
     """
-    if is_changed(event, old_event):
-        return True
-
-    return False
+    return is_changed(event, old_event)
 
 
 def parse_xml(xml):
