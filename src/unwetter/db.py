@@ -6,7 +6,7 @@ from datetime import datetime
 
 import pymongo
 
-from . import sentry, config, map
+from . import sentry, config
 
 
 try:
@@ -230,7 +230,7 @@ def current_events(at=None, all_severities=True):
 
         filteredResults.append(result)
 
-    return sorted(filteredResults, key=map.severity_key, reverse=True)
+    return sorted(filteredResults, key=config.severity_key, reverse=True)
 
 
 def clear():

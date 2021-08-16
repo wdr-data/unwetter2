@@ -14,6 +14,17 @@ COLORS = {
 }
 
 
+def severity_key(event):
+    mapped = {
+        "Minor": 0,
+        "Moderate": 1,
+        "Severe": 2,
+        "Extreme": 3,
+    }
+
+    return mapped.get(event["severity"], 100)
+
+
 with open("config/config.yml", "r") as fp:
     CONFIG = yaml.safe_load(fp.read())
 
