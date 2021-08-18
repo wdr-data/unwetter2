@@ -47,25 +47,10 @@ def filter_districts(event):
     ]
 
 
-def filter_communes(event):
-    return [
-        commune
-        for commune in event["areas"]
-        if state_for_cell_id(commune["warn_cell_id"]) in STATES_FILTER
-    ]
-
-
 def district_list(event, all=False):
     return ", ".join(
         district["name"]
         for district in (event["districts"] if all else filter_districts(event))
-    )
-
-
-def commune_list(event, all=False):
-    return ", ".join(
-        commune["name"]
-        for commune in (event["areas"] if all else filter_communes(event))
     )
 
 

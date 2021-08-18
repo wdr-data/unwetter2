@@ -17,7 +17,8 @@ from .data.districts import DISTRICTS
 
 API_URL = (
     "https://opendata.dwd.de/weather/alerts/cap/"
-    "COMMUNEUNION_EVENT_STAT/Z_CAP_C_EDZW_LATEST_PVW_STATUS_PREMIUMEVENT_COMMUNEUNION_DE.zip"
+    "DISTRICT_EVENT_STAT/Z_CAP_C_EDZW_LATEST_PVW_STATUS_PREMIUMEVENT_DISTRICT_DE.zip"
+    # "COMMUNEUNION_EVENT_STAT/Z_CAP_C_EDZW_LATEST_PVW_STATUS_PREMIUMEVENT_COMMUNEUNION_DE.zip"
 )
 
 STATE_IDS = {
@@ -262,36 +263,7 @@ def parse_xml(xml):
         for area in commune_areas
     ]
 
-    event["geometry"] = [
-        {
-            "polygons": area["_polygons"],
-            "exclude_polygons": area["_exclude_polygons"],
-        }
-        for area in poly_areas
-    ]
-
-    event["districts"] = []
-    found_districts = set()
-    for area in event["areas"]:
-        try:
-            name, warn_cell_id = district_from_commune(area)
-        except KeyError:
-            # Some areas don't have a related district
-            continue
-
-        if warn_cell_id in found_districts:
-            continue
-
-        found_districts.add(warn_cell_id)
-
-        event["districts"].append(
-            {
-                "name": name,
-                "warn_cell_id": warn_cell_id,
-            }
-        )
-
-    event["districts"] = sorted(event["districts"], key=lambda elem: elem["name"])
+    event["districts"] = event["areas"]
 
     event["states"] = sorted(states)
 
