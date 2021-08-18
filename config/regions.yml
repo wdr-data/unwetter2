@@ -68,7 +68,7 @@ Köln-Bundesstadt Bonner Raum:
     - Stadt Köln
     - Rhein-Erft-Kreis
     - Rhein-Sieg-Kreis
-    - Bundesstadt Bonn
+    - Bonn
     - Rheinisch-Bergischer Kreis
 
 Süden von NRW:
@@ -79,7 +79,7 @@ Süden von NRW:
     - Stadt Köln
     - Rhein-Erft-Kreis
     - Rhein-Sieg-Kreis
-    - Bundesstadt Bonn
+    - Bonn
     - Rheinisch-Bergischer Kreis
     - StädteRegion Aachen
     - Kreis Düren
@@ -213,7 +213,7 @@ Rheinland:
     genitive: Rheinlandes (NRW)
   districts:
     - StädteRegion Aachen
-    - Bundesstadt Bonn
+    - Bonn
     - Stadt Düsseldorf
     - Stadt Duisburg
     - Stadt Essen
@@ -284,8 +284,8 @@ Vorpommern (Mecklenburg-Vorpommern):
     gender: False
     genitive: von Vorpommern (Mecklenburg-Vorpommern)
   districts:
-    - Vorpommern-Rügen
-    - Vorpommern-Greifswald
+    - Kreis Vorpommern-Rügen
+    - Kreis Vorpommern-Greifswald
 
 Region Havelland-Fläming (Brandenburg):
   grammar:
@@ -374,7 +374,7 @@ Rhein-Main-Gebiet (Hessen):
     genitive: Rhein-Main-Gebietes (Hessen)
   districts:
     - Stadt Frankfurt am Main
-    - Kreis Offenbach
+    - Kreis Offenbach am Main
     - Stadt Offenbach
     - Stadt Wiesbaden
     - Kreis Groß-Gerau
@@ -420,7 +420,7 @@ Mittelrhein (Rheinland-Pfalz):
     genitive: Mittelrheins (Rheinland-Pfalz)
   districts:
     - Stadt Koblenz
-    - Neuwied
+    - Kreis Neuwied
     - Rhein-Lahn-Kreis
 
 Region Mosel-Saar (Rheinland-Pfalz):
@@ -437,7 +437,7 @@ Pfalz (Rheinland-Pfalz):
     gender: die
     genitive: Pfalz (Rheinland-Pfalz)
   districts:
-    - Stadt Frankenthal
+    - Stadt Frankenthal (Pfalz)
     - Kreis Kaiserslautern
     - Stadt Kaiserslautern
     - Stadt Landau in der Pfalz
@@ -450,7 +450,7 @@ Pfalz (Rheinland-Pfalz):
     - Kreis Kusel
     - Kreis Südliche Weinstraße
     - Rhein-Pfalz-Kreis
-    - Stadt Ludwigshafen
+    - Stadt Ludwigshafen am Rhein
     - Kreis Südwestpfalz
     - Stadt Pirmasens
 
@@ -469,7 +469,7 @@ Westerwald (Rheinland-Pfalz):
     gender: der
     genitive: Westerwalds (Rheinland-Pfalz)
   districts:
-    - Kreis Altenkirchen
+    - Kreis Altenkirchen (Westerwald)
     - Westerwaldkreis
 
 Region Stuttgart (Baden-Württemberg):
@@ -539,7 +539,7 @@ Südlicher Oberrhein (Baden-Württemberg):
     genitive: südlichen Oberrheins (Baden-Württemberg)
   districts:
     - Kreis Breisgau-Hochschwarzwald
-    - Stadt Freiburg
+    - Stadt Freiburg im Breisgau
     - Kreis Emmendingen
     - Ortenaukreis
 
@@ -646,7 +646,7 @@ Regierungsbezirk Freiburg (Baden-Württemberg):
     genitive: Regierungsbezirks Freiburg (Baden-Württemberg)
   districts:
     - Kreis Breisgau-Hochschwarzwald
-    - Stadt Freiburg
+    - Stadt Freiburg im Breisgau
     - Kreis Emmendingen
     - Ortenaukreis
     - Kreis Rottweil
@@ -670,7 +670,7 @@ Mittelfranken (Bayern):
     - Stadt Schwabach
     - Kreis Erlangen-Höchstadt
     - Kreis Nürnberger Land
-    - Kreis Neustadt a.d. Aisch - Bad Windsheim
+    - Kreis Neustadt a.d. Aisch-Bad Windsheim
     - Kreis Roth
     - Kreis Weißenburg-Gunzenhausen
 
@@ -738,7 +738,7 @@ Oberfranken (Bayern):
     - Kreis Kronach
     - Kreis Kulmbach
     - Kreis Lichtenfels
-    - Kreis Wunsiedel
+    - Kreis Wunsiedel i. Fichtelgebirge
 
 Oberpfalz (Bayern):
   grammar:
@@ -748,7 +748,7 @@ Oberpfalz (Bayern):
     - Stadt Amberg
     - Kreis Regensburg
     - Stadt Regensburg
-    - Stadt Weiden in der Oberpfalz
+    - Stadt Weiden i.d. OPf.
     - Kreis Amberg-Sulzbach
     - Kreis Cham
     - Kreis Neumarkt i.d. OPf.
@@ -770,7 +770,7 @@ Schwaben (Bayern):
     - Kreis Dillingen a.d. Donau
     - Kreis Günzburg
     - Kreis Neu-Ulm
-    - Kreis Lindau
+    - Kreis Lindau (Bodensee)
     - Kreis Ostallgäu
     - Kreis Unterallgäu
     - Kreis Donau-Ries
@@ -867,7 +867,7 @@ Region Hannover (Niedersachsen):
     - Kreis Hameln-Pyrmont
     - Kreis Hildesheim
     - Kreis Holzminden
-    - Kreis Nienburg
+    - Kreis Nienburg (Weser)
     - Kreis Schaumburg
 
 Region Lüneburg (Niedersachsen):
@@ -895,7 +895,7 @@ Weser-Ems-Region (Niedersachsen):
     - Stadt Delmenhorst
     - Stadt Emden
     - Kreis Oldenburg
-    - Stadt Oldenburg
+    - Stadt Oldenburg (Oldb)
     - Kreis Osnabrück
     - Stadt Osnabrück
     - Stadt Wilhelmshaven
@@ -922,8 +922,7 @@ Sachsen-Anhalt:
     - Kreis Anhalt-Bitterfeld
     - Kreis Börde
     - Burgenlandkreis
-    - Kreis Harz - Tiefland
-    - Kreis Harz - Bergland
+    - Kreis Harz
     - Kreis Jerichower Land
     - Kreis Mansfeld-Südharz
     - Saalekreis
@@ -938,25 +937,17 @@ Sachsen:
   districts:
     - Stadt Chemnitz
     - Erzgebirgskreis
-    - Kreis Mittelsachsen - Tiefland
-    - Kreis Mittelsachsen - Bergland
-    - Vogtlandkreis - Tiefland
-    - Vogtlandkreis - Bergland
-    - Kreis Zwickau - Tiefland
-    - Kreis Zwickau - Bergland
+    - Kreis Mittelsachsen
+    - Vogtlandkreis
+    - Kreis Zwickau
     - Stadt Dresden
-    - Kreis Bautzen - Tiefland
-    - Kreis Bautzen - Bergland
-    - Kreis Görlitz - Tiefland
-    - Kreis Görlitz - Bergland
+    - Kreis Bautzen
+    - Kreis Görlitz
     - Kreis Meißen
-    - Kreis Sächsische Schweiz-Osterzgebirge - Tiefland
-    - Kreis Sächsische Schweiz-Osterzgebirge - westelbisches Bergland
-    - Kreis Sächsische Schweiz-Osterzgebirge - ostelbisches Bergland
+    - Kreis Sächsische Schweiz-Osterzgebirge
     - Stadt Leipzig
     - Kreis Leipzig
-    - Kreis Nordsachsen - Nord
-    - Kreis Nordsachsen - Süd
+    - Kreis Nordsachsen
 
 Thüringen:
   grammar:
