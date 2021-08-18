@@ -22,7 +22,7 @@
 <OM_FIELD FieldID = "61" FieldType = "2" FieldName = "OnAirTrigger" IsEmpty = "yes"><OM_INT32></OM_INT32></OM_FIELD>
 <OM_FIELD FieldID = "62" FieldType = "2" FieldName = "OnAirStatus" IsEmpty = "yes"><OM_INT32></OM_INT32></OM_FIELD>
 <OM_FIELD FieldID = "84" FieldType = "2" FieldName = "AutomationStatus" IsEmpty = "yes"><OM_INT32></OM_INT32></OM_FIELD>
-<OM_FIELD FieldID = "86" FieldType = "1" FieldName = "Agentur" IsEmpty = "no"><OM_STRING>WINA</OM_STRING></OM_FIELD>
+<OM_FIELD FieldID = "86" FieldType = "1" FieldName = "Agentur" IsEmpty = "no"><OM_STRING>UWA-BUND</OM_STRING></OM_FIELD>
 <OM_FIELD FieldID = "100" FieldType = "2" FieldName = "Erstellt von" IsEmpty = "no"><OM_INT32>18408</OM_INT32></OM_FIELD>
 <OM_FIELD FieldID = "101" FieldType = "2" FieldName = "Break" IsEmpty = "yes"><OM_INT32></OM_INT32></OM_FIELD>
 <OM_FIELD FieldID = "128" FieldType = "3" FieldName = "AiredTime" IsEmpty = "yes"><OM_DATETIME></OM_DATETIME></OM_FIELD>
