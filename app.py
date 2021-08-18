@@ -7,7 +7,7 @@ import pytz
 from feedgen.feed import FeedGenerator
 from flask import Flask, Response, request, json, send_from_directory
 
-from unwetter import db, generate, wina as wina_gen, sentry
+from unwetter import db, generate, wina as wina_gen, sentry, config
 from unwetter.generate import urls
 
 
@@ -81,7 +81,7 @@ def api_v1_current_events():
 
         filtered_events.append(event)
 
-    return json.dumps(sorted(filtered_events, key=map.severity_key, reverse=True))
+    return json.dumps(sorted(filtered_events, key=config.severity_key, reverse=True))
 
 
 # Serve React App
