@@ -361,7 +361,8 @@ Nordhessen (Hessen):
     gender: False
     genitive: von Nordhessen (Hessen)
   districts:
-    - Kreis und Stadt Kassel
+    - Kreis Kassel
+    - Stadt Kassel
     - Kreis Hersfeld-Rotenburg
     - Schwalm-Eder-Kreis
     - Kreis Waldeck-Frankenberg
@@ -373,7 +374,8 @@ Rhein-Main-Gebiet (Hessen):
     genitive: Rhein-Main-Gebietes (Hessen)
   districts:
     - Stadt Frankfurt am Main
-    - Kreis und Stadt Offenbach
+    - Kreis Offenbach
+    - Stadt Offenbach
     - Stadt Wiesbaden
     - Kreis Groß-Gerau
     - Hochtaunuskreis
@@ -387,7 +389,8 @@ Südhessen (Hessen):
     genitive: von Südhessen (Hessen)
   districts:
     - Kreis Bergstraße
-    - Kreis Darmstadt-Dieburg und Stadt Darmstadt
+    - Kreis Darmstadt-Dieburg
+    - Stadt Darmstadt
     - Odenwaldkreis
 
 Eifel (Rheinland-Pfalz):
@@ -426,7 +429,8 @@ Region Mosel-Saar (Rheinland-Pfalz):
     genitive: Region Mosel-Saar (Rheinland-Pfalz)
   districts:
     - Kreis Bernkastel-Wittlich
-    - Kreis Trier-Saarburg und Stadt Trier
+    - Kreis Trier-Saarburg
+    - Stadt Trier
 
 Pfalz (Rheinland-Pfalz):
   grammar:
@@ -434,7 +438,8 @@ Pfalz (Rheinland-Pfalz):
     genitive: Pfalz (Rheinland-Pfalz)
   districts:
     - Stadt Frankenthal
-    - Kreis und Stadt Kaiserslautern
+    - Kreis Kaiserslautern
+    - Stadt Kaiserslautern
     - Stadt Landau in der Pfalz
     - Stadt Neustadt an der Weinstraße
     - Stadt Speyer
@@ -444,8 +449,10 @@ Pfalz (Rheinland-Pfalz):
     - Kreis Germersheim
     - Kreis Kusel
     - Kreis Südliche Weinstraße
-    - Rhein-Pfalz-Kreis und Stadt Ludwigshafen
-    - Kreis Südwestpfalz und Stadt Pirmasens
+    - Rhein-Pfalz-Kreis
+    - Stadt Ludwigshafen
+    - Kreis Südwestpfalz
+    - Stadt Pirmasens
 
 Rheinhessen (Rheinland-Pfalz):
   grammar:
@@ -454,7 +461,8 @@ Rheinhessen (Rheinland-Pfalz):
   districts:
     - Stadt Worms
     - Kreis Alzey-Worms
-    - Kreis Mainz-Bingen und Stadt Mainz
+    - Kreis Mainz-Bingen
+    - Stadt Mainz
 
 Westerwald (Rheinland-Pfalz):
   grammar:
@@ -481,7 +489,8 @@ Region Heilbronn-Franken (Baden-Württemberg):
     gender: die
     genitive: Region Heilbronn-Franken (Baden-Württemberg)
   districts:
-    - Kreis und Stadt Heilbronn
+    - Kreis Heilbronn
+    - Stadt Heilbronn
     - Hohenlohekreis
     - Kreis Schwäbisch Hall
     - Main-Tauber-Kreis
@@ -500,7 +509,8 @@ Region Mittlerer Oberrhein (Baden-Württemberg):
     genitive: Region Mittlerer Oberrhein (Baden-Württemberg)
   districts:
     - Stadt Baden-Baden
-    - Kreis und Stadt Karlsruhe
+    - Kreis Karlsruhe
+    - Stadt Karlsruhe
     - Kreis Rastatt
 
 Region Rhein-Neckar-Odenwald (Baden-Württemberg):
@@ -510,7 +520,8 @@ Region Rhein-Neckar-Odenwald (Baden-Württemberg):
   districts:
     - Stadt Mannheim
     - Neckar-Odenwald-Kreis
-    - Rhein-Neckar-Kreis und Stadt Heidelberg
+    - Rhein-Neckar-Kreis
+    - Stadt Heidelberg
 
 Nordschwarzwald (Baden-Württemberg):
   grammar:
@@ -518,7 +529,8 @@ Nordschwarzwald (Baden-Württemberg):
     genitive: Nordschwarzwaldes (Baden-Württemberg)
   districts:
     - Kreis Calw
-    - Enzkreis und Stadt Pforzheim
+    - Enzkreis
+    - Stadt Pforzheim
     - Kreis Freudenstadt
 
 Südlicher Oberrhein (Baden-Württemberg):
@@ -526,7 +538,8 @@ Südlicher Oberrhein (Baden-Württemberg):
     gender: der
     genitive: südlichen Oberrheins (Baden-Württemberg)
   districts:
-    - Kreis Breisgau-Hochschwarzwald und Stadt Freiburg
+    - Kreis Breisgau-Hochschwarzwald
+    - Stadt Freiburg
     - Kreis Emmendingen
     - Ortenaukreis
 
@@ -562,7 +575,8 @@ Region Donau-Iller (Baden-Württemberg):
     gender: die
     genitive: Region Donau-Iller (Baden-Württemberg)
   districts:
-    - Alb-Donau-Kreis und Stadt Ulm
+    - Alb-Donau-Kreis
+    - Stadt Ulm
     - Kreis Biberach
 
 Region Bodensee-Oberschwaben (Baden-Württemberg):
@@ -582,7 +596,8 @@ Regierungsbezirk Tübingen (Baden-Württemberg):
     - Kreis Reutlingen
     - Kreis Tübingen
     - Zollernalbkreis
-    - Alb-Donau-Kreis und Stadt Ulm
+    - Alb-Donau-Kreis
+    - Stadt Ulm
     - Kreis Biberach
     - Bodenseekreis
     - Kreis Ravensburg
@@ -599,7 +614,8 @@ Regierungsbezirk Stuttgart (Baden-Württemberg):
     - Kreis Göppingen
     - Kreis Ludwigsburg
     - Rems-Murr-Kreis
-    - Kreis und Stadt Heilbronn
+    - Kreis Heilbronn
+    - Stadt Heilbronn
     - Hohenlohekreis
     - Kreis Schwäbisch Hall
     - Main-Tauber-Kreis
@@ -612,13 +628,16 @@ Regierungsbezirk Karlsruhe (Baden-Württemberg):
     genitive: Regierungsbezirks Karlsruhe (Baden-Württemberg)
   districts:
     - Stadt Baden-Baden
-    - Kreis und Stadt Karlsruhe
+    - Kreis Karlsruhe
+    - Stadt Karlsruhe
     - Kreis Rastatt
     - Stadt Mannheim
     - Neckar-Odenwald-Kreis
-    - Rhein-Neckar-Kreis und Stadt Heidelberg
+    - Rhein-Neckar-Kreis
+    - Stadt Heidelberg
     - Kreis Calw
-    - Enzkreis und Stadt Pforzheim
+    - Enzkreis
+    - Stadt Pforzheim
     - Kreis Freudenstadt
 
 Regierungsbezirk Freiburg (Baden-Württemberg):
@@ -626,7 +645,8 @@ Regierungsbezirk Freiburg (Baden-Württemberg):
     gender: der
     genitive: Regierungsbezirks Freiburg (Baden-Württemberg)
   districts:
-    - Kreis Breisgau-Hochschwarzwald und Stadt Freiburg
+    - Kreis Breisgau-Hochschwarzwald
+    - Stadt Freiburg
     - Kreis Emmendingen
     - Ortenaukreis
     - Kreis Rottweil
@@ -641,14 +661,16 @@ Mittelfranken (Bayern):
     gender: False
     genitive: von Mittelfranken (Bayern)
   districts:
-    - Kreis und Stadt Ansbach
+    - Kreis Ansbach
+    - Stadt Ansbach
     - Stadt Erlangen
-    - Kreis und Stadt Fürth
+    - Kreis Fürth
+    - Stadt Fürth
     - Stadt Nürnberg
     - Stadt Schwabach
     - Kreis Erlangen-Höchstadt
     - Kreis Nürnberger Land
-    - Kreis Neustadt a.d.Aisch - Bad Windsheim
+    - Kreis Neustadt a.d. Aisch - Bad Windsheim
     - Kreis Roth
     - Kreis Weißenburg-Gunzenhausen
 
@@ -657,9 +679,11 @@ Oberbayern (Bayern):
     gender: False
     genitive: Oberbayern (Bayern)
   districts:
-    - Kreis und Stadt München
+    - Kreis München
+    - Stadt München
     - Stadt Ingolstadt
-    - Kreis und Stadt Rosenheim
+    - Kreis Rosenheim
+    - Stadt Rosenheim
     - Kreis Altötting
     - Kreis Berchtesgadener Land
     - Kreis Bad Tölz-Wolfratshausen
@@ -672,7 +696,7 @@ Oberbayern (Bayern):
     - Kreis Garmisch-Partenkirchen
     - Kreis Landsberg am Lech
     - Kreis Miesbach
-    - Kreis Mühldorf a.Inn
+    - Kreis Mühldorf a. Inn
     - Kreis Neuburg-Schrobenhausen
     - Kreis Pfaffenhofen a.d. Ilm
     - Kreis Starnberg
@@ -684,14 +708,17 @@ Niederbayern (Bayern):
     gender: False
     genitive: Niederbayern (Bayern)
   districts:
-    - Kreis und Stadt Landshut
-    - Kreis und Stadt Passau
+    - Kreis Landshut
+    - Stadt Landshut
+    - Kreis Passau
+    - Stadt Passau
     - Kreis Deggendorf
     - Kreis Freyung-Grafenau
     - Kreis Kelheim
     - Kreis Regen
     - Kreis Rottal-Inn
-    - Kreis Straubing-Bogen und Stadt Straubing
+    - Kreis Straubing-Bogen
+    - Stadt Straubing
     - Kreis Dingolfing-Landau
 
 Oberfranken (Bayern):
@@ -699,10 +726,14 @@ Oberfranken (Bayern):
     gender: False
     genitive: Oberfranken (Bayern)
   districts:
-    - Kreis und Stadt Bamberg
-    - Kreis und Stadt Bayreuth
-    - Kreis und Stadt Coburg
-    - Kreis und Stadt Hof
+    - Kreis Bamberg
+    - Stadt Bamberg
+    - Kreis Bayreuth
+    - Stadt Bayreuth
+    - Kreis Coburg
+    - Stadt Coburg
+    - Kreis Hof
+    - Stadt Hof
     - Kreis Forchheim
     - Kreis Kronach
     - Kreis Kulmbach
@@ -715,7 +746,8 @@ Oberpfalz (Bayern):
     genitive: Oberpfalz (Bayern)
   districts:
     - Stadt Amberg
-    - Kreis und Stadt Regensburg
+    - Kreis Regensburg
+    - Stadt Regensburg
     - Stadt Weiden in der Oberpfalz
     - Kreis Amberg-Sulzbach
     - Kreis Cham
@@ -729,7 +761,8 @@ Schwaben (Bayern):
     gender: False
     genitive: Schwaben (Bayern)
   districts:
-    - Kreis und Stadt Augsburg
+    - Kreis Augsburg
+    - Stadt Augsburg
     - Stadt Kaufbeuren
     - Stadt Kempten (Allgäu)
     - Stadt Memmingen
@@ -748,9 +781,12 @@ Unterfranken (Bayern):
     gender: False
     genitive: Unterfranken (Bayern)
   districts:
-    - Kreis und Stadt Aschaffenburg
-    - Kreis und Stadt Schweinfurt
-    - Kreis und Stadt Würzburg
+    - Kreis Aschaffenburg
+    - Stadt Aschaffenburg
+    - Kreis Schweinfurt
+    - Stadt Schweinfurt
+    - Kreis Würzburg
+    - Stadt Würzburg
     - Kreis Bad Kissingen
     - Kreis Rhön-Grabfeld
     - Kreis Haßberge
@@ -858,8 +894,10 @@ Weser-Ems-Region (Niedersachsen):
   districts:
     - Stadt Delmenhorst
     - Stadt Emden
-    - Kreis und Stadt Oldenburg
-    - Kreis und Stadt Osnabrück
+    - Kreis Oldenburg
+    - Stadt Oldenburg
+    - Kreis Osnabrück
+    - Stadt Osnabrück
     - Stadt Wilhelmshaven
     - Kreis Ammerland
     - Kreis Aurich
