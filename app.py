@@ -19,12 +19,12 @@ app = Flask(__name__, static_folder="website/build")
 def feed():
     fg = FeedGenerator()
     fg.id(urls.URL_BASE)
-    fg.title("Unwetter-Bund Testfeed")
+    fg.title("Unwetter-Bund")
     fg.link(
         href="https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html",
         rel="alternate",
     )
-    fg.subtitle("This is a test feed!")
+    fg.subtitle("Amtliche Unwetterwarnungen der Stufen 3 und 4")
     fg.link(href=f"{urls.URL_BASE}feed.rss", rel="self")
     fg.language("de")
 
