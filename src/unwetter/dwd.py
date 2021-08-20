@@ -273,7 +273,7 @@ def parse_xml(xml):
     for area in event["areas"]:
         cell_id = area["warn_cell_id"]
 
-        if cell_id.startswith("1"):
+        if cell_id in DISTRICTS:
             districts[cell_id] = area
 
         elif cell_id in PARTIALS:

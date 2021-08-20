@@ -400,20 +400,24 @@ DISTRICTS = {
     "116075000": "Saale-Orla-Kreis",
     "116076000": "Kreis Greiz",
     "116077000": "Kreis Altenburger Land",
+    # --- Spezialkreise
+    "901056002": "Insel Helgoland",
+    "903457002": "Insel Borkum",
 }
 
 INVERSE_DISTRICTS = {v: k for k, v in DISTRICTS.items()}
 
 
 PARTIALS = {
+    "901056001": "Kreis Pinneberg (ohne Helgoland)",
+    "903457001": "Kreis Leer (ohne Borkum)",
+    # ---
     "901051001": "Kreis Dithmarschen - Binnenland",
     "901051002": "Kreis Dithmarschen - Küste",
     "901054001": "Kreis Nordfriesland - Binnenland",
     "901054002": "Kreis Nordfriesland - Küste",
     "901055001": "Kreis Ostholstein - Binnenland",
     "901055002": "Kreis Ostholstein - Küste",
-    "901056001": "Kreis Pinneberg (ohne Helgoland)",
-    "901056002": "Insel Helgoland",
     "901057001": "Kreis Plön - Binnenland",
     "901057002": "Kreis Plön - Küste",
     "901058001": "Kreis Rendsburg-Eckernförde - Binnenland",
@@ -426,8 +430,6 @@ PARTIALS = {
     "903452002": "Kreis Aurich - Küste",
     "903455001": "Kreis Friesland - Binnenland",
     "903455002": "Kreis Friesland - Küste",
-    "903457001": "Kreis Leer (ohne Borkum)",
-    "903457002": "Insel Borkum",
     "903461001": "Kreis Wesermarsch - Binnenland",
     "903461002": "Kreis Wesermarsch - Küste",
     "903462001": "Kreis Wittmund - Binnenland",

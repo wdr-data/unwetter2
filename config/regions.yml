@@ -993,6 +993,8 @@ Nordseeküste:
     - Kreis Wesermarsch
     - Kreis Wittmund
     - Kreis Cuxhaven
+    - Insel Helgoland
+    - Insel Borkum
     - Kreis Stade
     - Hansestadt Hamburg
     - Kreis Pinneberg
@@ -1009,7 +1011,9 @@ Niedersächsische Nordseeküste:
     - Kreis Wesermarsch
     - Kreis Wittmund
     - Kreis Cuxhaven
+    - Insel Borkum
     - Kreis Stade
+    - Insel Helgoland
 
 Schleswig-Holsteinische Nordseeküste:
   grammar:
@@ -1022,10 +1026,10 @@ Schleswig-Holsteinische Nordseeküste:
     - Kreis Steinburg
 
 Osteeküste:
-  grammar:
+grammar:
     gender: die
     genitive: der Ostseeküste
-  districts:
+districts:
     - Stadt Flensburg
     - Stadt Kiel
     - Hansestadt Lübeck
