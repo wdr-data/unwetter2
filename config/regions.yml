@@ -1026,10 +1026,10 @@ Schleswig-Holsteinische Nordseeküste:
     - Kreis Steinburg
 
 Osteeküste:
-grammar:
+  grammar:
     gender: die
     genitive: der Ostseeküste
-districts:
+  districts:
     - Stadt Flensburg
     - Stadt Kiel
     - Hansestadt Lübeck
