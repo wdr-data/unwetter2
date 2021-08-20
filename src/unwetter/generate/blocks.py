@@ -153,7 +153,7 @@ def title(event, variant="default"):
             extreme = "- Höchste Warnstufe "
         else:
             extreme = ""
-        return f"Amtliche Unwetterwarnung des DWD (UWA) {extreme}{extention}"
+        return f"Amtliche Unwetterwarnung des DWD (UWA-BUND) {extreme}{extention}"
 
 
 def dates(event):
