@@ -12,7 +12,8 @@ import xmltodict
 import pytz
 
 from . import regions, db, config
-from .data.districts import DISTRICTS
+from .data.districts import DISTRICTS, PARTIALS
+from .sentry import sentry_sdk
 
 
 API_URL = (
@@ -70,11 +71,12 @@ def parse_polygon(polygon):
     return [[float(x) for x in pair.split(",")] for pair in polygon.split(" ")]
 
 
-def district_from_commune(commune):
-    common_id = commune["warn_cell_id"][-8:-3]
+def district_from_partial(partial):
+    """Get district-level WARNCELLID from level 8 or 9 IDs"""
+    common_id = partial["warn_cell_id"][-8:-3]
     warn_cell_id = f"1{common_id}000"
     name = DISTRICTS[warn_cell_id]
-    return name, warn_cell_id
+    return {"name": name, "warn_cell_id": warn_cell_id}
 
 
 def is_changed(event, old_event):
@@ -224,7 +226,7 @@ def parse_xml(xml):
     states = set()
 
     poly_areas = []
-    commune_areas = []
+    warn_cell_areas = []
 
     for area in xml_dict["info"]["area"]:
         area["geocode"] = area.get("geocode", [])
@@ -253,21 +255,40 @@ def parse_xml(xml):
         if area["areaDesc"] == "polygonal event area":
             poly_areas.append(area)
         else:
-            commune_areas.append(area)
+            warn_cell_areas.append(area)
+
+    event["states"] = sorted(states)
 
     event["areas"] = [
         {
             "name": area["areaDesc"],
             "warn_cell_id": area["_warn_cell_id"],
         }
-        for area in commune_areas
+        for area in warn_cell_areas
     ]
 
-    event["districts"] = event["areas"]
+    districts = {}
+    unknown_partials = {}
 
-    event["states"] = sorted(states)
+    for area in event["areas"]:
+        cell_id = area["warn_cell_id"]
 
-    event["regions"] = regions.best_match([area["name"] for area in event["districts"]])
+        if cell_id.startswith("1"):
+            districts[cell_id] = area
+
+        elif cell_id in PARTIALS:
+            upscaled = district_from_partial(area)
+            print("Resolving partial", area, "into", upscaled)
+            districts[upscaled["warn_cell_id"]] = upscaled
+
+        elif cell_id.startswith("9"):
+            print("Unknown partial:", area)
+            unknown_partials[cell_id] = area
+
+    event["districts"] = list(districts.values())
+    event["unknown_partials"] = list(unknown_partials.values())
+
+    event["regions"] = regions.best_match(event["districts"])
 
     if "references" in xml_dict:
         event["references"] = [

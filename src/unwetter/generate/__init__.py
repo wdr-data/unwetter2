@@ -23,6 +23,8 @@ Regionale Zuordnung: {region_list(event)}
 
 Betroffene Kreise und Städte: {district_list(event)}
 
+Betroffene Kreise und Städte (inkl. Unterteilungen): {area_list(event)}
+
 Karten-Grafik Download:
 {urls.events(event)}
 
@@ -40,7 +42,7 @@ Verhaltenshinweise: {event['instruction'] or ''}
 
 +++ Textvorschläge +++
 HINWEIS: Textvorschläge werden nach redaktionellen Vorgaben automatisch generiert.
-Je nach Unwetterlage ist es nötig, sie noch einmal passgenau zu überarbeiten und 
+Je nach Unwetterlage ist es nötig, sie noch einmal passgenau zu überarbeiten und
 dabei auch die eventuellen Warnungen vor verschiedenen Unwettergebieten zusammenzufassen.
 
 TWEET: {tweet(event)}
@@ -134,6 +136,8 @@ def describe_update(event):
 Regionale Zuordnung: {region_list(event)}
 
 Betroffene Kreise und Städte: {district_list(event)}
+
+Betroffene Kreise und Städte (inkl. Unterteilungen): {area_list(event)}
 
 Karten-Grafik Download:
 {urls.events(event)}

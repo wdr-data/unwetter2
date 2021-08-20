@@ -2,6 +2,8 @@
 
 from datetime import datetime, timedelta
 
+from unwetter.data.districts import PARTIALS
+
 from ..config import STATES_FILTER
 from ..dwd import state_for_cell_id
 from ..regions import REGIONS
@@ -51,6 +53,21 @@ def district_list(event, all=False):
     return ", ".join(
         district["name"]
         for district in (event["districts"] if all else filter_districts(event))
+    )
+
+
+def filter_areas(event):
+    return [
+        area
+        for area in event["areas"]
+        if state_for_cell_id(area["warn_cell_id"]) in STATES_FILTER
+        and (area["warn_cell_id"] in REGIONS or area["warn_cell_id"] in PARTIALS)
+    ]
+
+
+def area_list(event, all=False):
+    return ", ".join(
+        area["name"] for area in (event["areas"] if all else filter_areas(event))
     )
 
 
