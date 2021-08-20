@@ -2,7 +2,7 @@
 
 from datetime import datetime, timedelta
 
-from unwetter.data.districts import PARTIALS
+from unwetter.data.districts import DISTRICTS, PARTIALS
 
 from ..config import STATES_FILTER
 from ..dwd import state_for_cell_id
@@ -61,7 +61,7 @@ def filter_areas(event):
         area
         for area in event["areas"]
         if state_for_cell_id(area["warn_cell_id"]) in STATES_FILTER
-        and (area["warn_cell_id"] in REGIONS or area["warn_cell_id"] in PARTIALS)
+        and (area["warn_cell_id"] in DISTRICTS or area["warn_cell_id"] in PARTIALS)
     ]
 
 
@@ -183,6 +183,19 @@ def dates(event):
             f'von {onset_date}, {onset.strftime("%H:%M")} Uhr '
             f'bis {expires_date}, {expires.strftime("%H:%M")} Uhr'
         )
+
+
+def dates_haesslich(event):
+    onset = local_time(event["onset"])
+    expires = event["expires"] and local_time(event["expires"])
+
+    onset_formatted = onset.strftime("%d.%m.%y %H:%M Uhr")
+    if expires:
+        expires_formatted = expires.strftime("%d.%m.%y %H:%M Uhr")
+    else:
+        expires_formatted = "Nicht angegeben"
+
+    return f"gültig von: {onset_formatted}\ngültig bis: {expires_formatted}"
 
 
 def expires(event):

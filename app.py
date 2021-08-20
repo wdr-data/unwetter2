@@ -19,7 +19,7 @@ app = Flask(__name__, static_folder="website/build")
 def feed():
     fg = FeedGenerator()
     fg.id(urls.URL_BASE)
-    fg.title("Unwetter Testfeed")
+    fg.title("Unwetter-Bund Testfeed")
     fg.link(
         href="https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html",
         rel="alternate",
@@ -29,7 +29,7 @@ def feed():
     fg.language("de")
 
     # Iterate over the most recent 5 events matching filter
-    for event in db.load_published(limit=10):
+    for event in db.load_published(limit=50):
         fe = fg.add_entry(order="append")
         fe.id(event["id"])
         fe.title(generate.title(event, variant="wina_headline"))

@@ -14,10 +14,7 @@ def describe_new_event(event):
     text = f"""
 {title(event, variant='wina_body')}
 
-
-+++ Gültigkeit +++
-
-{upper_first(dates(event))}.
+Warnstufe: {severities[event['severity']]}
 
 Regionale Zuordnung: {region_list(event)}
 
@@ -25,51 +22,19 @@ Betroffene Kreise und Städte: {district_list(event)}
 
 Betroffene Kreise und Städte (inkl. Unterteilungen): {area_list(event)}
 
-Karten-Grafik Download:
-{urls.events(event)}
-
-
-+++ Wetterlage +++
-
-Warnstufe: {severities[event['severity']]}
+{dates_haesslich(event)}
 
 {event['description']}
 
-Warnung vor: {parameters(event)}
+{event['instruction'] or ' '}
 
-Verhaltenshinweise: {event['instruction'] or ''}
-
-
-+++ Textvorschläge +++
-HINWEIS: Textvorschläge werden nach redaktionellen Vorgaben automatisch generiert.
-Je nach Unwetterlage ist es nötig, sie noch einmal passgenau zu überarbeiten und
-dabei auch die eventuellen Warnungen vor verschiedenen Unwettergebieten zusammenzufassen.
-
-TWEET: {tweet(event)}
-
-TV-CRAWL: {crawl(event)}
-
-RADIO: {radio(event)}
-
-+++ DWD +++
-Die Eilmeldung des DWD erreicht OpenMedia in der Regel wenige Minuten nach dieser Meldung.
-(In einigen Fällen, z.B. kurze Gültigkeit und/oder kleines Gebiet, kann eine Meldung des DWD entfallen!)
 
 Website des Deutschen Wetterdienstes:
-https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html
-
-Telefon DWD: 069-8062-6900
-
-
-+++ Allgemeine Information +++
-Die aufgeführten Informationen dürfen als Quelle zur Abwicklung des Unwetter-Workflows genutzt werden.
-
-Die Bereitstellung dieser Information erfolgt durch den Unwetter-Warnassistenten (UWA), ein Produkt des Newsrooms.
-Der UWA wird aktiv weiterentwickelt.
-Kontakt und weitere Informationen: {os.environ["WDR_PROJECT_INFO_URL"]}
+Kreisebene: https://www.dwd.de/DE/wetter/warnungen_aktuell/warnanwendung_node.html
+Gemeindeebene: https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html
 """.strip()
 
-    for optional in ["Regionale Zuordnung:", "Warnung vor:", "Verhaltenshinweise:"]:
+    for optional in ["Regionale Zuordnung:", ""]:
         text = text.replace(f"{optional} \n\n", "")
 
     return text
@@ -131,7 +96,7 @@ def describe_update(event):
 {all_changes}
 +++ Gültigkeit +++
 
-{upper_first(dates(event))}.
+Warnstufe: {severities[event['severity']]}
 
 Regionale Zuordnung: {region_list(event)}
 
@@ -139,48 +104,16 @@ Betroffene Kreise und Städte: {district_list(event)}
 
 Betroffene Kreise und Städte (inkl. Unterteilungen): {area_list(event)}
 
-Karten-Grafik Download:
-{urls.events(event)}
-
-
-+++ Wetterlage +++
-
-Warnstufe: {severities[event['severity']]}
+{dates_haesslich(event)}
 
 {event['description']}
 
-Warnung vor: {parameters(event)}
+{event['instruction'] or ''}
 
-Verhaltenshinweise: {event['instruction'] or ''}
-
-
-+++ Textvorschläge +++
-HINWEIS: Textvorschläge werden nach redaktionellen Vorgaben automatisch generiert.
-Je nach Unwetterlage ist es nötig, sie noch einmal passgenau zu überarbeiten
-und dabei auch die eventuellen Warnungen vor verschiedenen Unwettergebieten zusammenzufassen.
-
-TWEET: {tweet(event)}
-
-TV-CRAWL: {crawl(event)}
-
-RADIO: {radio(event)}
-
-+++ DWD +++
-Die Eilmeldung des DWD erreicht OpenMedia in der Regel wenige Minuten nach dieser Meldung.
-(In einigen Fällen, z.B. kurze Gültigkeit und/oder kleines Gebiet, kann eine Meldung des DWD entfallen!)
 
 Website des Deutschen Wetterdienstes:
-https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html
-
-Telefon DWD: 069-8062-6900
-
-
-+++ Allgemeine Information +++
-Die aufgeführten Informationen dürfen als Quelle zur Abwicklung des Unwetter-Workflows genutzt werden.
-
-Die Bereitstellung dieser Information erfolgt durch den Unwetter-Warnassistenten (UWA), ein Produkt des Newsrooms.
-Der UWA wird aktiv weiterentwickelt.
-Kontakt und weitere Informationen: {os.environ["WDR_PROJECT_INFO_URL"]}
+Kreisebene: https://www.dwd.de/DE/wetter/warnungen_aktuell/warnanwendung_node.html
+Gemeindeebene: https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html
 """.strip()
 
     for optional in ["Regionale Zuordnung:", "Warnung vor:", "Verhaltenshinweise:"]:
