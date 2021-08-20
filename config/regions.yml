@@ -977,3 +977,89 @@ Thüringen:
     - Saale-Orla-Kreis
     - Kreis Greiz
     - Kreis Altenburger Land
+
+Nordseeküste:
+  grammar:
+    gender: die
+    genitive: der Nordseeküste
+  districts:
+    - Kreis Dithmarschen
+    - Kreis Nordfriesland
+    - Kreis Steinburg
+    - Stadt Emden
+    - Stadt Wilhelmshaven
+    - Kreis Aurich
+    - Kreis Friesland
+    - Kreis Wesermarsch
+    - Kreis Wittmund
+    - Kreis Cuxhaven
+    - Kreis Stade
+    - Hansestadt Hamburg
+    - Kreis Pinneberg
+
+Niedersächsische Nordseeküste:
+  grammar:
+    gender: die
+    genitive: der niedersächsischen Nordseeküste
+  districts:
+    - Stadt Emden
+    - Stadt Wilhelmshaven
+    - Kreis Aurich
+    - Kreis Friesland
+    - Kreis Wesermarsch
+    - Kreis Wittmund
+    - Kreis Cuxhaven
+    - Kreis Stade
+
+Schleswig-Holsteinische Nordseeküste:
+  grammar:
+    gender: die
+    genitive: der Schleswig-Holsteinischen Nordseeküste
+  districts:
+    - Kreis Dithmarschen
+    - Kreis Nordfriesland
+    - Kreis Pinneberg
+    - Kreis Steinburg
+
+Osteeküste:
+  grammar:
+    gender: die
+    genitive: der Ostseeküste
+  districts:
+    - Stadt Flensburg
+    - Stadt Kiel
+    - Hansestadt Lübeck
+    - Kreis Ostholstein
+    - Kreis Plön
+    - Kreis Rendsburg-Eckernförde
+    - Kreis Schleswig-Flensburg
+    - Hansestadt Rostock
+    - Kreis Rostock
+    - Kreis Nordwestmecklenburg
+    - Kreis Vorpommern-Rügen
+    - Kreis Vorpommern-Greifswald
+
+Schleswig-Holsteinische Osteeküste:
+  grammar:
+    gender: die
+    genitive: der Schleswig-Holsteinischen Ostseeküste
+  districts:
+    - Stadt Flensburg
+    - Stadt Kiel
+    - Hansestadt Lübeck
+    - Kreis Ostholstein
+    - Kreis Plön
+    - Kreis Rendsburg-Eckernförde
+    - Kreis Schleswig-Flensburg
+
+Mecklenburg-Vorpommersche Ostseeküste:
+  grammar:
+    gender: die
+    genitive: der Mecklenburg-Vorpommerschen Ostseeküste
+  districts:
+    - Kreis Schleswig-Flensburg
+    - Hansestadt Rostock
+    - Kreis Rostock
+    - Kreis Nordwestmecklenburg
+    - Kreis Vorpommern-Rügen
+    - Kreis Vorpommern-Greifswald

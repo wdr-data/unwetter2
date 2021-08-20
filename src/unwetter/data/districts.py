@@ -426,6 +426,8 @@ PARTIALS = {
     "903452002": "Kreis Aurich - Küste",
     "903455001": "Kreis Friesland - Binnenland",
     "903455002": "Kreis Friesland - Küste",
+    "903457001": "Kreis Leer (ohne Borkum)",
+    "903457002": "Insel Borkum",
     "903461001": "Kreis Wesermarsch - Binnenland",
     "903461002": "Kreis Wesermarsch - Küste",
     "903462001": "Kreis Wittmund - Binnenland",
