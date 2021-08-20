@@ -26,15 +26,10 @@ Betroffene Kreise und Städte (inkl. Unterteilungen): {area_list(event)}
 
 {event['description']}
 
-{event['instruction'] or ' '}
-
-
-Website des Deutschen Wetterdienstes:
-Kreisebene: https://www.dwd.de/DE/wetter/warnungen_aktuell/warnanwendung_node.html
-Gemeindeebene: https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html
+{event['instruction'] or ''}
 """.strip()
 
-    for optional in ["Regionale Zuordnung:", ""]:
+    for optional in ["Regionale Zuordnung:"]:
         text = text.replace(f"{optional} \n\n", "")
 
     return text
@@ -94,7 +89,7 @@ def describe_update(event):
     text = f"""
 {title(event, variant='wina_body')}
 {all_changes}
-+++ Gültigkeit +++
++++ Neuer Stand der Meldung +++
 
 Warnstufe: {severities[event['severity']]}
 
@@ -109,14 +104,9 @@ Betroffene Kreise und Städte (inkl. Unterteilungen): {area_list(event)}
 {event['description']}
 
 {event['instruction'] or ''}
-
-
-Website des Deutschen Wetterdienstes:
-Kreisebene: https://www.dwd.de/DE/wetter/warnungen_aktuell/warnanwendung_node.html
-Gemeindeebene: https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html
 """.strip()
 
-    for optional in ["Regionale Zuordnung:", "Warnung vor:", "Verhaltenshinweise:"]:
+    for optional in ["Regionale Zuordnung:"]:
         text = text.replace(f"{optional} \n\n", "")
 
     return text
