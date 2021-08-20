@@ -290,7 +290,7 @@ Vorpommern (Mecklenburg-Vorpommern):
 Region Havelland-Fläming (Brandenburg):
   grammar:
     gender: die
-    genitive: Region Havelland-Fä�ming (Brandenburg)
+    genitive: Region Havelland-Fläming (Brandenburg)
   districts:
     - Stadt Brandenburg
     - Stadt Potsdam
