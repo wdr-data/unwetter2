@@ -13,8 +13,8 @@ from .helpers import upper_first, local_time
 severities = {
     "Minor": "Wetterwarnung",
     "Moderate": "Markante Wetterwarnung",
-    "Severe": "🔴 Amtliche Unwetterwarnung",
-    "Extreme": "🔴 Amtliche Extreme Unwetterwarnung",
+    "Severe": "Amtliche Unwetterwarnung",
+    "Extreme": "Amtliche Extreme Unwetterwarnung",
 }
 
 
@@ -73,20 +73,13 @@ def area_list(event, all=False):
 
 def keywords(event):
     # f'{severities[event["severity"]]}, {region_list(event) or "Nicht NRW"}'
-    parameter_keys = ", ".join(
-        f"{param}" for param, value in event["parameters"].items()
-    )
+    keyword_severity = severities[event["severity"]].replace("Amtliche ", "")
+    keyword_type = warn_type(event, variant="wina_body")
 
-    return f"Unwetter, UWA, Warnung, {parameter_keys}"
+    return f"{keyword_type}, {keyword_severity}"
 
 
-def title(event, variant="default"):
-    """
-    Return first sentence of main body text
-
-    variant can be 'default' or 'wina_headline'
-    """
-
+def warn_type(event, variant="default"):
     extentions = {
         "default": {
             "new_event": "🚨 Neue Meldung",
@@ -118,22 +111,34 @@ def title(event, variant="default"):
     }
 
     if event["msg_type"] == "Alert":
-        extention = extentions[variant]["new_event"]
+        description = extentions[variant]["new_event"]
     elif event["msg_type"] == "Update":
         if event["response_type"] == "AllClear":
-            extention = extentions[variant]["cancelled_prematurely"]
+            description = extentions[variant]["cancelled_prematurely"]
         elif event["special_type"] == "ReAlert":
-            extention = extentions[variant]["event_relevant_again"]
+            description = extentions[variant]["event_relevant_again"]
         elif event["special_type"] == "UpdateAlert":
-            extention = extentions[variant]["new_event"]
+            description = extentions[variant]["new_event"]
         elif event["special_type"] == "Irrelevant":
-            extention = extentions[variant]["irrelevant"]
+            description = extentions[variant]["irrelevant"]
         else:
-            extention = extentions[variant]["updated"]
+            description = extentions[variant]["updated"]
     elif event["msg_type"] == "Cancel":
-        extention = extentions[variant]["cancelled_wrong"]
+        description = extentions[variant]["cancelled_wrong"]
     else:
-        extention = extentions[variant]["unknown"]
+        description = extentions[variant]["unknown"]
+
+    return description
+
+
+def title(event, variant="default"):
+    """
+    Return first sentence of main body text
+
+    variant can be 'default' or 'wina_headline'
+    """
+
+    extention = warn_type(event, variant=variant)
 
     if variant == "default":
         return f'{extention}: {event["headline"]}'
