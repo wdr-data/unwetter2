@@ -61,4 +61,4 @@ def _best_match(district_ids):
         print(f'Unknown districts "{[INVERSE_DISTRICTS[id] for id in district_ids]}"')
         return []
     else:
-        return [(match[0], relevance)] + best_match(district_ids_set - match_cell_ids)
+        return [(match[0], relevance)] + _best_match(district_ids_set - match_cell_ids)
