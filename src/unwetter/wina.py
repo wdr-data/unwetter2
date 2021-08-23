@@ -81,11 +81,13 @@ def upload(files):
     for url, user, passw in logins:
 
         try:
+            context = ssl.create_default_context()
+            context.set_ciphers("ALL:@SECLEVEL=1")
             ftps = FTP_TLS(
                 host=os.environ[url],
                 user=os.environ[user],
                 passwd=os.environ[passw],
-                context=ssl.create_default_context(),
+                context=context,
             )
         except KeyError:
             print(
