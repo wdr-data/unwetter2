@@ -743,7 +743,7 @@ Oberfranken (Bayern):
 Oberpfalz (Bayern):
   grammar:
     gender: False
-    genitive: von Oberpfalz (Bayern)
+    genitive: der Oberpfalz (Bayern)
   districts:
     - Stadt Amberg
     - Kreis Regensburg
