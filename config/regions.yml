@@ -677,7 +677,7 @@ Mittelfranken (Bayern):
 Oberbayern (Bayern):
   grammar:
     gender: False
-    genitive: Oberbayern (Bayern)
+    genitive: von Oberbayern (Bayern)
   districts:
     - Kreis München
     - Stadt München
@@ -706,7 +706,7 @@ Oberbayern (Bayern):
 Niederbayern (Bayern):
   grammar:
     gender: False
-    genitive: Niederbayern (Bayern)
+    genitive: von Niederbayern (Bayern)
   districts:
     - Kreis Landshut
     - Stadt Landshut
@@ -724,7 +724,7 @@ Niederbayern (Bayern):
 Oberfranken (Bayern):
   grammar:
     gender: False
-    genitive: Oberfranken (Bayern)
+    genitive: von Oberfranken (Bayern)
   districts:
     - Kreis Bamberg
     - Stadt Bamberg
@@ -743,7 +743,7 @@ Oberfranken (Bayern):
 Oberpfalz (Bayern):
   grammar:
     gender: False
-    genitive: Oberpfalz (Bayern)
+    genitive: von Oberpfalz (Bayern)
   districts:
     - Stadt Amberg
     - Kreis Regensburg
@@ -759,7 +759,7 @@ Oberpfalz (Bayern):
 Schwaben (Bayern):
   grammar:
     gender: False
-    genitive: Schwaben (Bayern)
+    genitive: von Schwaben (Bayern)
   districts:
     - Kreis Augsburg
     - Stadt Augsburg
@@ -779,7 +779,7 @@ Schwaben (Bayern):
 Unterfranken (Bayern):
   grammar:
     gender: False
-    genitive: Unterfranken (Bayern)
+    genitive: von Unterfranken (Bayern)
   districts:
     - Kreis Aschaffenburg
     - Stadt Aschaffenburg
