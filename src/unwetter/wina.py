@@ -82,6 +82,20 @@ def _ftp_connect(login_info):
     return ftps
 
 
+def _directory_exists(ftps, dir_name):
+    """
+    https://stackoverflow.com/a/10695959
+    """
+    filelist = []
+    ftps.retrlines('LIST', filelist.append)
+
+    for f in filelist:
+        if f.split()[-1] == dir_name and f.upper().startswith('D'):
+            return True
+
+    return False
+
+
 def upload(files):
     """
     Uploads a WINA-XML file to a provided server via explicit FTP with TLS Protocol.
@@ -115,6 +129,11 @@ def upload(files):
             print("Failed FTP connection")
             sentry.sentry_sdk.capture_exception(last_exception)
             continue
+
+        # Check if directory exists and create if not
+        # For some reason it disappears sometimes?
+        if not _directory_exists(ftps, "uwabund"):
+            ftps.mkd("uwabund")
 
         for file in files:
             file.seek(0)
