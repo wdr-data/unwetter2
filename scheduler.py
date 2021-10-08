@@ -118,4 +118,15 @@ def clean_old_events():
     print("Number of events left in DB:", db.collection.count())
 
 
+@sched.scheduled_job("cron", hour=18)
+def send_alive_message():
+    alive_message = "Nicht senden - Statusmeldung: UWA aktiv.\nBitte beachten sie eventuell gültige Unwetterwarnungen."
+    wina.upload_text(
+        "Statusmeldung: UWA aktiv",
+        alive_message,
+        "UWA-BUND, Statusmeldung",
+    )
+    slack.post_message(alive_message)
+
+
 sched.start()
