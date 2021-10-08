@@ -120,9 +120,9 @@ def clean_old_events():
 
 @sched.scheduled_job("cron", hour=18)
 def send_alive_message():
-    alive_message = "Nicht senden - Statusmeldung: UWA aktiv.\nBitte beachten sie eventuell gültige Unwetterwarnungen."
+    alive_message = "Nicht senden - Statusmeldung: UWA aktiv.\n\nBitte beachten sie eventuell gültige Unwetterwarnungen."
     wina.upload_text(
-        "Statusmeldung: UWA aktiv",
+        "Nicht senden - Statusmeldung: UWA aktiv",
         alive_message,
         "UWA-BUND, Statusmeldung",
     )
