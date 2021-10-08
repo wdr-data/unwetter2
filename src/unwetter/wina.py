@@ -27,7 +27,12 @@ def from_id(id):
     text = generate.description(event)
     keywords = generate.keywords(event)
 
-    return wina_xml(sent, title, text, keywords)
+    # Set all to breaking if event is "Severe" or "Extreme"
+    breaking = False
+    if event["severity"] == "Extreme" or event["severity"] == "Severe":
+        breaking = True
+
+    return wina_xml(sent, title, text, keywords, breaking=breaking)
 
 
 def wina_xml(sent, title, text, keywords="", breaking=False):
@@ -87,10 +92,10 @@ def _directory_exists(ftps, dir_name):
     https://stackoverflow.com/a/10695959
     """
     filelist = []
-    ftps.retrlines('LIST', filelist.append)
+    ftps.retrlines("LIST", filelist.append)
 
     for f in filelist:
-        if f.split()[-1] == dir_name and f.upper().startswith('D'):
+        if f.split()[-1] == dir_name and f.upper().startswith("D"):
             return True
 
     return False
