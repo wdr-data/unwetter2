@@ -15,7 +15,7 @@ from unwetter.generate.helpers import BERLIN, local_now
 
 
 sentry.init()
-sched = BlockingScheduler(timezone=pytz.UTC)
+sched = BlockingScheduler(timezone=BERLIN)
 
 
 @sched.scheduled_job("interval", minutes=1)
