@@ -15,7 +15,7 @@ from unwetter.generate.helpers import BERLIN, local_now
 
 
 sentry.init()
-sched = BlockingScheduler(timezone=pytz.UTC)
+sched = BlockingScheduler(timezone=BERLIN)
 
 
 @sched.scheduled_job("interval", minutes=1)
@@ -116,6 +116,17 @@ def clean_old_events():
     print("Deleted", res.deleted_count, "events")
 
     print("Number of events left in DB:", db.collection.count())
+
+
+@sched.scheduled_job("cron", hour=18)
+def send_alive_message():
+    alive_message = "Nicht senden - Statusmeldung: UWA aktiv.\n\nBitte beachten sie eventuell gültige Unwetterwarnungen."
+    wina.upload_text(
+        "Nicht senden - Statusmeldung: UWA aktiv",
+        alive_message,
+        "UWA-BUND, Statusmeldung",
+    )
+    slack.post_message(alive_message)
 
 
 sched.start()
