@@ -87,10 +87,10 @@ def _directory_exists(ftps, dir_name):
     https://stackoverflow.com/a/10695959
     """
     filelist = []
-    ftps.retrlines('LIST', filelist.append)
+    ftps.retrlines("LIST", filelist.append)
 
     for f in filelist:
-        if f.split()[-1] == dir_name and f.upper().startswith('D'):
+        if f.split()[-1] == dir_name and f.upper().startswith("D"):
             return True
 
     return False
@@ -107,6 +107,8 @@ def upload(files):
         ("NVS_FTP_URL", "NVS_FTP_USER", "NVS_FTP_PASS"),
         ("NVS_FTP_URL_SECONDARY", "NVS_FTP_USER_SECONDARY", "NVS_FTP_PASS_SECONDARY"),
     ]
+
+    named_files = {f"uwa_{uuid4()}.xml": file for file in files}
 
     for login_info in logins:
 
@@ -137,8 +139,8 @@ def upload(files):
         if not _directory_exists(ftps, "uwabund"):
             ftps.mkd("uwabund")
 
-        for file in files:
+        for name, file in named_files.items():
             file.seek(0)
-            print(ftps.storbinary(f"STOR uwabund/uwa_{uuid4()}.xml", file))
+            print(ftps.storbinary(f"STOR {name}", file))
 
         print(ftps.quit())
