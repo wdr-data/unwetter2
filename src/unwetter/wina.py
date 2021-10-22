@@ -130,6 +130,8 @@ def upload(files):
             sentry.sentry_sdk.capture_exception(last_exception)
             continue
 
+        ftps.prot_p()
+
         # Check if directory exists and create if not
         # For some reason it disappears sometimes?
         if not _directory_exists(ftps, "uwabund"):
