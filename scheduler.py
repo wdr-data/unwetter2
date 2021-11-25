@@ -63,8 +63,7 @@ def update_db():
     if filtered:
         db.publish([event["id"] for event in filtered])
 
-        if local_now() > BERLIN.localize(dt.datetime(2021, 8, 23, 7, 0, 0)):
-            wina.upload_ids([event["id"] for event in filtered])
+        wina.upload_ids([event["id"] for event in filtered])
 
         for event in filtered:
             print(f'Sending event {event["id"]} to Slack')
