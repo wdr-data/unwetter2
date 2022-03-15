@@ -75,7 +75,10 @@ def api_v1_current_events():
             continue
 
         del event["_id"]
-        del event["geometry"]
+
+        if "geometry" in event:
+            del event["geometry"]
+
         for field in ("sent", "effective", "onset", "expires"):
             event[field] = event[field].replace(tzinfo=timezone.utc).timestamp()
 
