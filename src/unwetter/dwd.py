@@ -285,6 +285,9 @@ def parse_xml(xml):
             print("Unknown partial:", area)
             unknown_partials[cell_id] = area
 
+        else:
+            print("Unknown cell ID:", area)
+
     event["districts"] = list(districts.values())
     event["unknown_partials"] = list(unknown_partials.values())
 
