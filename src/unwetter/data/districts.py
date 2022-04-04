@@ -19,6 +19,7 @@ DISTRICTS = {
     "103102000": "Stadt Salzgitter",
     "103103000": "Stadt Wolfsburg",
     "103151000": "Kreis Gifhorn",
+    "103152000": "Kreis Göttingen",
     "103153000": "Kreis Goslar",
     "103154000": "Kreis Helmstedt",
     "103155000": "Kreis Northeim",

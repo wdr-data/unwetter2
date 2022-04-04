@@ -5,14 +5,14 @@ from datetime import datetime, timezone
 
 import pytz
 from feedgen.feed import FeedGenerator
-from flask import Flask, Response, request, json, send_from_directory
+from flask import Flask, Response, request, json
 
 from unwetter import db, generate, wina as wina_gen, sentry, config
 from unwetter.generate import urls
 
 
 sentry.init()
-app = Flask(__name__, static_folder="website/build")
+app = Flask(__name__)
 
 
 @app.route("/feed.rss")
@@ -75,21 +75,13 @@ def api_v1_current_events():
             continue
 
         del event["_id"]
-        del event["geometry"]
+
+        if "geometry" in event:
+            del event["geometry"]
+
         for field in ("sent", "effective", "onset", "expires"):
             event[field] = event[field].replace(tzinfo=timezone.utc).timestamp()
 
         filtered_events.append(event)
 
     return json.dumps(sorted(filtered_events, key=config.severity_key, reverse=True))
-
-
-# Serve React App
-@app.route("/", defaults={"path": ""})
-@app.route("/<path:path>")
-def serve(path):
-    full_path = os.path.join(app.static_folder, path)
-    if path != "" and os.path.exists(full_path):
-        return send_from_directory(app.static_folder, path)
-    else:
-        return send_from_directory(app.static_folder, "index.html")

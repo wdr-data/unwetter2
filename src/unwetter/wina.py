@@ -10,7 +10,7 @@ from uuid import uuid4
 
 from . import db, generate, sentry
 
-with open("assets/wina_template.xml", "r") as fp:
+with open("assets/wina_template.xml", "r", encoding="utf-8") as fp:
     WINA_TEMPLATE = fp.read()
 
 
@@ -122,9 +122,7 @@ def upload(files):
             try:
                 ftps = _ftp_connect(login_info)
 
-                # Can't use this, causes
-                # ConnectionResetError: [Errno 104] Connection reset by peer
-                # when trying to list directory
+                # Enable encryption of data channel
                 ftps.prot_p()
 
                 # Test connection
